@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="java.js"></script>
+    </head>
+    <body>
+        
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+                font-family: 'Roboto', sans-serif;
+            }
+            body {
+                background-color: #f2f2f2;
+            }
+            .heading {
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                margin: 20px auto;
+            }
+            .heading h1 {
+                font-size: 50px;
+                color: #000;
+                margin-bottom: 25px;
+                position: relative;
+            }
+            .heading h1::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                display: block;
+                margin: 0 auto;
+                background-color: #4caf50;
+            }
+            .heading p{
+                font-size: 18px;
+                color: #666;
+                margin-bottom: 35px;
+            }
+            .container {
+                width: 90%;
+                margin: 0 auto;
+                padding: 10px 20px;
+            }
+            .about{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: hidden;
+            }
+            .about-image img{
+                max-width: 100%;
+                height: auto;
+                display: block;
+                transition: 0.5s ease;
+            }
+            .about-content{
+                flex: 1;
+            }
+            .about-content h2{
+                font-size: 23px;
+                margin-bottom: 15px;
+                color: #333;
+            }
+            .about-content p{
+                font-size: 18px;
+                line-height: 1.5;
+                color: #666;
+            }
+            .about-content .read-more{
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #4caf50;
+                color: #fff;
+                font-size: 19px;
+                text-decoration: none;
+                border-radius: 25px;
+                margin-top: 15px;
+                transition: 0.3s ease;
+            }
+            .about-content .read-more:hover{
+                background-color: #3e8e41;
+            }
+            @media screen and (max-width: 768px){
+                .heading{
+                    padding: 0px 20px;
+                }
+                .heading h1{
+                    font-size: 36px;
+                }
+                .heading p{
+                    font-size: 17px;
+                    margin-bottom: 0px;
+                }
+                .container{
+                    padding: 0px;
+                }
+                .about{
+                    padding: 20px;
+                    flex-direction: column;
+                }
+                .about-image{
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                }
+                .about-content p{
+                    padding: 0px;
+                    font-size: 16px;
+                }
+                .about-content .read-more{
+                    font-size: 16px;
+                }
+            }
+            #more {display: none;}
+            mark {
+  background-color: rgba(255, 255, 255, 0.782);
+  color: black;
+}
+        </style>
+        <nav class="headbar">
+            <a href="index.html">Home</a>
+               <a href="sign-in.html">Login</a>
+               <a href="Qr.html">Qr</a>
+               <a href="contact.html">Contact</a>
+        </nav>
+        <div class="heading">
+            <h1>About</h1>
+            <p>This project aims to revolutionize electrical machine learning through Augmented Reality (AR). By scanning QR codes affixed to electrical machines, users can instantly access a rich layer of information superimposed on their device's screen. This AR interface provides critical details such as specifications, operational parameters, and maintenance guidelines. Our focus on a streamlined, AR-based solution eschews the complexities of Machine Learning, prioritizing immediate information delivery and user experience. By eliminating unnecessary components, 
+                we ensure a lightweight, efficient application that caters to the core needs of learners and technicians. Through this intuitive and immersive approach, we empower users to effortlessly grasp complex electrical machine concepts, enhancing both learning efficiency and on-the-job performance.<span id="dots">...</span><span id="more">
+                    <br><mark>1. Augmented Reality (AR) Integration:</mark>
+                    Utilizing AR allows for the overlay of digital information onto the real world through the user’s device camera. This can be achieved using platforms like ARCore, ARKit, or Vuforia, depending on the target devices (Android, iOS, or cross-platform).
+                    Information Layering: The information displayed can range from simple text overlays and images to complex animations that explain the machinery’s working. This dynamic content can be tailored based on the user's interaction, enhancing the learning experience.
+                    <br><mark>2. QR Code Functionality:</mark>
+                    QR Code Generation and Placement: QR codes must be strategically placed on various parts of the machines. These codes need to be durable and easily scannable, considering the environmental conditions of the machine locations.
+                    Content Mapping: Each QR code could link to specific information sets. This requires a backend system where each code is mapped to relevant data, ensuring updates and changes can be easily propagated through a central database.
+                    <br><mark>3. User Interface (UI) and User Experience (UX):</mark>
+                    The UI should be intuitive, minimizing user effort to access information. Essential information should be no more than a few taps away.
+                    Customizable Interfaces: Depending on the expertise level of the user (technician, engineer, or trainee), the complexity and depth of information can vary, providing a customized experience that matches the user's knowledge level.
+                    <br><mark>4. Application Performance and Scalability:</mark>
+                    Emphasizing a lightweight design ensures that the application is accessible on a wide range of devices, including those with lower specifications.
+                    Scalability: As more machines get QR tags and as your database of information grows, ensuring the system is scalable without decreasing performance is crucial.
+                    <br><mark>5. Potential Challenges and Solutions:</mark>
+                     Ensuring that the data linked to each QR code is accurate and up-to-date is vital. Regular audits and updates to the content will be necessary.
+                    User Adoption: Encouraging users to adopt this new method might require training sessions and demonstrative content to highlight the benefits over traditional methods.
+                    <br><mark>6. Future Enhancements:</mark>
+                    Interactive Tutorials and Simulations: Once the basic framework is set, you could expand the content to include interactive tutorials or real-time troubleshooting simulations.
+                    Integration with Machine Learning: In future phases, integrating predictive analytics through machine learning could predict maintenance and operational issues before they occur.</span></p>
+
+<button onclick="myFunction()" id="myBtn">Read more</button>
+<button type="button" onclick="location.href='http://127.0.0.1:5500/Qr.html'">
+    <a href="#" class="buy-btn">Scan QR</a>
+    </button>
+        </div>
+    </body>
+</html>
